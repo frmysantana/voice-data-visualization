@@ -5,7 +5,6 @@ import altair as alt
 import tempfile
 from st_audiorec import st_audiorec
 
-# todo: fix why i can't user the 'browse files' button?
 st.set_page_config(layout="wide")
 st.title("Voice-Controlled CSV Data Visualization App")
 st.write("Upload a CSV file and use voice commands to interact with the data.")
@@ -56,14 +55,12 @@ def visualize_data(command):
             )
             st.session_state.charts.append(("Bar Chart", chart))
 
-# def record_audio():
 with col2:
     st.write("Press the 'Record' button and speak your command...")
 
     wav_audio_data = st_audiorec()
 
     if wav_audio_data is not None:
-        # st.audio(wav_audio_data, format='audio/wav')
         st.write("Recording stopped.")
         st.write("Recognizing command...")
 

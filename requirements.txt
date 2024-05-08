@@ -1,2 +1,2 @@
-speech_recognition==3.10.3
-streamlit-audiorec
+SpeechRecognition==3.10.3
+streamlit-audiorec==0.1.3
